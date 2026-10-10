@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="am">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Debre Bisrat · ውዳሴ ማርያም</title>
+  <meta name="description" content="Wudase Mariam recordings for each day of the week.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="play" viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></symbol>
+    <symbol id="pause" viewBox="0 0 24 24"><path d="M6.5 4.5h4v15h-4zM13.5 4.5h4v15h-4z" fill="currentColor"/></symbol>
+    <symbol id="next" viewBox="0 0 24 24"><path d="M5 5v14l10-7zM16.5 5h2.5v14h-2.5z" fill="currentColor"/></symbol>
+    <symbol id="repeat" viewBox="0 0 24 24"><path d="M17 3l3 3-3 3M4 11V9a3 3 0 0 1 3-3h13M7 21l-3-3 3-3M20 13v2a3 3 0 0 1-3 3H4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <main class="wrap">
+    <header class="top">
+      <h1>Debre Bisrat</h1>
+      <p>ውዳሴ ማርያም · Wudase Mariam</p>
+    </header>
+
+    <nav class="days" id="days" aria-label="Day of the week"><span class="pill" id="pill"></span></nav>
+
+    <section id="day"></section>
+
+    <p class="classes" id="classes"></p>
+  </main>
+
+  <div class="player" id="player" aria-hidden="true">
+    <div class="seek" id="seek"><div class="fill" id="fill"></div></div>
+    <div class="player-in">
+      <div class="now">
+        <div class="now-title" id="now-title"></div>
+        <div class="now-sub" id="now-sub"></div>
+      </div>
+      <button class="pbtn" id="repeat-btn" type="button" aria-pressed="false" aria-label="Repeat this section"><svg><use href="#repeat"/></svg></button>
+      <button class="pbtn big" id="toggle" type="button" aria-label="Play"><svg><use id="toggle-ico" href="#play"/></svg></button>
+      <button class="pbtn" id="next-btn" type="button" aria-label="Next section"><svg><use href="#next"/></svg></button>
+    </div>
+  </div>
+
+  <audio id="audio" preload="none"></audio>
+  <script src="recordings.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
